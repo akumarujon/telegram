@@ -11,9 +11,9 @@ Telegram bot that uses Next.js API and Serverless (SWC for local development).
 
 ## About
 
-Telegram bot built on top of Next.js Serverless API. I used [grammy](https://grammy.dev/) as the Telegram bot framework.
+Telegram bot built on top of Next.js Serverless API. We used [grammy](https://grammy.dev/) as the Telegram bot framework.
 
-> I host all contents statically, so you may correct me up by sending a pull request.
+> We host all contents statically, so you may correct me up by sending a pull request.
 
 ## Features
 
