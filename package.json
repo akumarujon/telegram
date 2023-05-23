@@ -2,7 +2,7 @@
   "name": "telegram",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/dev.js",
+  "main": "dist/utils/dev.js",
   "author": "Yuri Katsuki <yuri@katsuki.moe>",
   "scripts": {
     "lint": "next lint",

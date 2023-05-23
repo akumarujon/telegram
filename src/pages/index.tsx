@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Yuri&#39;s Telegram</title>
+        <title>Mad Maid&#39;s Telegram Assistant</title>
         <meta
           name="description"
           content="Telegram bot application written on Next.js"
@@ -21,7 +21,7 @@ export default function Home() {
         <div className={styles.description}>
           <p>
             Telegram bot is working at&nbsp;
-            <code className={styles.code}>@yurioonbot</code>
+            <code className={styles.code}>@madmaidsbot</code>
           </p>
           <div>
             <a
@@ -50,7 +50,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="https://github.com/katsuki-yuri/telegram-bot"
+            href="https://github.com/mad-maids/telegram"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://t.me/yurioonbot"
+            href="https://t.me/madmaidsbot"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/katsuki-yuri"
+            href="https://github.com/mad-maids"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -86,16 +86,16 @@ export default function Home() {
           </a>
 
           <a
-            href="https://t.me/yurionblog"
+            href="https://github.com/mad-maids/telegram/pkgs/container/maid-bot"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Channel <span>-&gt;</span>
+              Docker <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Visit Yuri&#39;s channel on Telegram.
+              Host your very own Maiden via Docker.
             </p>
           </a>
         </div>
