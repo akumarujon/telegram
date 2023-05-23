@@ -15,6 +15,7 @@ COPY . .
 
 RUN npm i -g pnpm
 RUN pnpm webhook:build
+RUN pnpm polling:build
 
 FROM node:18-alpine AS runner
 WORKDIR /app
@@ -35,4 +36,14 @@ USER nextjs
 EXPOSE 3000
 ENV PORT 3000
 
-CMD ["node", "server.js"]
+#CMD ["node", "server.js"]
+
+# if environment variable TYPE is set to "webhook", run webhook server
+# otherwise, run polling server
+RUN if [ "$TYPE" = "webhook" ] ; then \
+    echo "Running webhook server" && \
+    pnpm webhook:start ; \
+    else \
+    echo "Running polling server" && \
+    pnpm polling:start ; \
+    fi
