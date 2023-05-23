@@ -37,9 +37,6 @@ EXPOSE 3000
 ENV PORT 3000
 
 #CMD ["node", "server.js"]
-
-# if environment variable TYPE is set to "webhook", run webhook server
-# otherwise, run polling server
 RUN if [ "$TYPE" = "webhook" ] ; then \
     echo "Running webhook server" && \
     pnpm webhook:start ; \
