@@ -82,7 +82,7 @@ export default function Home() {
             <h2 className={inter.className}>
               GitHub <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>Visit Yuri&#39;s GitHub page.</p>
+            <p className={inter.className}>Visit Maid&#39;s GitHub page.</p>
           </a>
 
           <a
