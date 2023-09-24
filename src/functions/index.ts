@@ -9,7 +9,7 @@ const functions = async (bot: Bot) => {
   bot.use(help);
   bot.use(start);
   bot.use(what);
-  bot.use(warn)
+  bot.use(warn);
   bot.use(error);
 };
 

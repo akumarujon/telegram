@@ -9,7 +9,7 @@ import { Context, InlineKeyboard } from "grammy";
 export const reply = async (
   ctx: Context,
   message: string,
-  buttons?: InlineKeyboard,
+  buttons?: InlineKeyboard
 ): Promise<any> => {
   const config: { [key: string]: any } = {
     parse_mode: "HTML",

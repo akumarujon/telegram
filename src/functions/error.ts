@@ -31,7 +31,10 @@ composer.on("message", async (ctx: Context): Promise<any> => {
   }
 
   if (ctx.message?.chat.type === "private") {
-    return await ctx.reply(message, { parse_mode: "HTML", reply_markup: keyboard });
+    return await ctx.reply(message, {
+      parse_mode: "HTML",
+      reply_markup: keyboard,
+    });
   }
 });
 

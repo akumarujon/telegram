@@ -13,14 +13,15 @@ composer.command("what", async (ctx: Context): Promise<void> => {
       ctx!.from!.last_name ? ctx!.from!.last_name : ""
     }` +
     `\n` +
-    (ctx?.from?.username &&
-      `<b>Username:</b> ${
-        ctx.from.username ? "@" + ctx.from.username : "the fuck?"
-      }` + `\n`) +
+    (ctx?.from?.username
+      ? `<b>Username:</b> ${"@" + ctx.from.username}` + `\n`
+      : "") +
     (ctx?.chat?.id && `<b>Chat ID:</b> <code>${ctx.chat.id}</code>` + `\n`) +
     (ctx?.message?.from.id &&
       `<b>User ID:</b> <code>${ctx.message.from.id}</code>` + `\n`) +
-    (ctx?.message?.message_thread_id ? `<b>Topic:</b> <code>${ctx.message.message_thread_id}</code>` + `\n` : "") +
+    (ctx?.message?.message_thread_id
+      ? `<b>Topic:</b> <code>${ctx.message.message_thread_id}</code>` + `\n`
+      : "") +
     (ctx.chat?.type === "private" ? "" : `<b>Status:</b> ${status}`);
 
   if (ctx.message!.is_topic_message) {
