@@ -47,14 +47,6 @@ export default function Home() {
                   </g>
                 </g>
               </svg>
-              <Image
-                src="/maid-text.svg"
-                alt="Mad Maids"
-                className={styles.sakhibLogo}
-                width={100}
-                height={100}
-                priority
-              />
             </a>
           </div>
         </div>
