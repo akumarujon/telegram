@@ -9,8 +9,8 @@ export const message: string =
   `Also, this bot will serve for me as a shortcut and automation.`;
 
 export const keyboard = new InlineKeyboard()
-  .text("✍🏻 Blog", "blog_1")
-  .url("🌐 ", "https://katsuki.moe");
+  .url("✍🏻 Blog", "https://www.maid.uz/blog")
+  .url("🌐 Website", "https://maid.uz");
 
 composer.command("start", async (ctx: Context): Promise<void> => {
   await ctx.reply(message, {

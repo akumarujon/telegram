@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "dist/utils/dev.js",
-  "author": "Yuri Katsuki <yuri@katsuki.moe>",
+  "author": "Sokhibjon Orzikulov <sakhib@orzklv.uz>",
   "scripts": {
     "lint": "next lint",
     "format": "prettier --check --write \"{**/*,*}.{ts,tsx}\"",
