@@ -6,8 +6,8 @@ const composer = new Composer();
 
 composer.on("message:text", async (ctx: Context): Promise<any> => {
   if (
-    ctx.chat!.id === -1001174263940 &&
-    ctx.message!.message_thread_id === topics["neofetch"]
+    ctx.chat!.id === -1001303954475 &&
+    ctx.message!.message_thread_id === topics["news"]
   ) {
     return await ctx.deleteMessage();
   }
