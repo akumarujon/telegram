@@ -9,11 +9,9 @@ export const message =
   `\n` +
   `/help - <code>show this message</code>` +
   `\n` +
-  `/blog - <code>listing blog posts</code>` +
+  `/what - <code>find out</code>` +
   `\n` +
-  `/playing - <code>music i'm listening</code>` +
-  `\n` +
-  `/playlist - <code>my collection of music</code>` +
+  `/warn - <code>warn offtopic member</code>` +
   `\n`;
 
 export const keyboard = start.keyboard;
