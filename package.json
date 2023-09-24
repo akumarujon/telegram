@@ -15,7 +15,6 @@
     "polling:start": "nodemon --watch \"dist/**/*\" -e js ./dist/utils/dev.js"
   },
   "dependencies": {
-    "@next/font": "13.4.3",
     "grammy": "^1.16.1",
     "next": "13.4.3",
     "react": "18.2.0",
