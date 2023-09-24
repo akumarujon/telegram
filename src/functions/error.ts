@@ -1,5 +1,6 @@
 import { Composer, Context, InlineKeyboard } from "grammy";
-import * as start from "@/functions/start";
+import topics from "../../data/topics.json";
+import admins from "../../data/admins.json";
 
 const composer = new Composer();
 
@@ -13,9 +14,24 @@ export const keyboard = new InlineKeyboard().text(
   "help"
 );
 
-composer.on("message", async (ctx: Context): Promise<void> => {
+composer.on("message", async (ctx: Context): Promise<any> => {
+  if (
+    ctx.chat!.id === -1001303954475 &&
+    ctx.message!.message_thread_id === topics["news"] &&
+    !admins.includes(ctx!.message!.from.id)
+  ) {
+    return await ctx.deleteMessage();
+  }
+
+  if (
+    ctx?.message?.from?.username &&
+    ctx?.message?.from?.username === "Channel_Bot"
+  ) {
+    return await ctx.deleteMessage();
+  }
+
   if (ctx.message?.chat.type === "private") {
-    await ctx.reply(message, { parse_mode: "HTML", reply_markup: keyboard });
+    return await ctx.reply(message, { parse_mode: "HTML", reply_markup: keyboard });
   }
 });
 

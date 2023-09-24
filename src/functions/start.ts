@@ -10,7 +10,9 @@ export const message: string =
 
 export const keyboard = new InlineKeyboard()
   .url("✍🏻 Blog", "https://www.maid.uz/blog")
+  .row()
   .url("🌐 Website", "https://maid.uz")
+  .row()
   .url("🫂 Community", "https://t.me/madmaids");
 
 composer.command("start", async (ctx: Context): Promise<void> => {
