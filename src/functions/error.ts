@@ -23,6 +23,16 @@ composer.on("message", async (ctx: Context): Promise<any> => {
     return await ctx.deleteMessage();
   }
 
+  const chatAdmins = await ctx.getChatAdministrators()
+
+  if (
+    ctx.chat!.id === -1001303954475 &&
+    ctx.message!.message_thread_id === topics["discussion"] &&
+    !chatAdmins.some((admin) => admin.user.id === ctx!.message!.from.id)
+  ) {
+    return await ctx.deleteMessage();
+  }
+
   if (
     ctx?.message?.from?.username &&
     ctx?.message?.from?.username === "Channel_Bot"
