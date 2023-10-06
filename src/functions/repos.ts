@@ -10,13 +10,9 @@ composer.on("inline_query", async (ctx: Context) => {
   const repos = await find(query);
 
   const result = repos.map((repo: Repo) =>
-    InlineQueryResultBuilder.article(
-      v4() as string,
-      repo.name,
-      {
-        description: `Description: ${repo.description}`,
-      },
-    ).text(
+    InlineQueryResultBuilder.article(v4() as string, repo.name, {
+      description: `Description: ${repo.description}`,
+    }).text(
       `Repository: ${repo.name}\n` +
         `URL: ${repo.html_url}\n` +
         `Description: ${repo.description}\n` +
@@ -24,7 +20,7 @@ composer.on("inline_query", async (ctx: Context) => {
         `Language: ${repo.language || "None."}\n` +
         `Forks: ${repo.forks}\n` +
         `Open issues: ${repo.open_issues}\n` +
-        `Topics: ${repo.topics?.join(",") || "None."}`,
+        `Topics: ${repo.topics?.join(",") || "None."}`
     )
   );
 

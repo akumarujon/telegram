@@ -23,7 +23,7 @@ composer.on("message", async (ctx: Context): Promise<any> => {
     return await ctx.deleteMessage();
   }
 
-  const chatAdmins = await ctx.getChatAdministrators()
+  const chatAdmins = await ctx.getChatAdministrators();
 
   if (
     ctx.chat!.id === -1001303954475 &&
