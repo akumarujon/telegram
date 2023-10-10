@@ -2,7 +2,7 @@ import { reply } from "@/utils/sender";
 import { Context, NextFunction } from "grammy";
 import topics from "../../data/topics.json" assert { type: "json" };
 
-export default async (ctx: Context, next: NextFunction) => {
+const isReply = async (ctx: Context, next: NextFunction) => {
   // if (!ctx.message?.is_topic_message) {
   //   return await reply(
   //     ctx,
@@ -18,3 +18,5 @@ export default async (ctx: Context, next: NextFunction) => {
   }
   await next();
 };
+
+export default isReply;
