@@ -1,13 +1,15 @@
+import { Repo } from "@/types/repo";
+
 const url = "https://api.github.com/users/mad-maids/repos";
 
 async function find(name: string) {
-  let repos;
+  let repos: Repo[] = [];
 
-  const response = await fetch(url)
+  await fetch(url)
     .then((r) => r.json())
     .then((data) => (repos = data));
 
-  return await repos.filter((repo) => repo.name.includes(name));
+  return repos.filter((repo) => repo.name.includes(name));
 }
 
 export { find };
